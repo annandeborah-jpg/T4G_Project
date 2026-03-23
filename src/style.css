@@ -141,6 +141,7 @@ p{color: var(--dark-blue); font-family: 'quicksand'; font-style: bold; font-size
     margin-bottom: 20px;
 }
 .cta-box h3 { font-size: 1.6rem; margin-bottom: 20px; }
+
 /* Buttons & Colors */
 .btn {
     border: none;
@@ -176,23 +177,9 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 .footer-col h4{ color: var(--yellow); font-family: 'quicksand'; font-size: 18px; margin-bottom: 10px; }
                 
 
+
 /* Learn Page */
-* { margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'quicksand', sans-serif; }
-
-body{ min-width: 0; max-width: 1400px; margin: auto; background-color: #f8fbfd; line-height: 1.5cm; color: #333; overflow-x: hidden; width: 100%;}
-.container { width: 95%; max-width: 1400px; margin: 0 auto; padding: 0 20px;}
-
-/* Header */
-.nav { display: flex; justify-content: space-between; align-items: center; border: 1px solid #e8f1f8; background-color: white; position: sticky; top: 0; z-index: 1000;}
-nav a { text-decoration: none; color: #333; font-weight: 500; margin-right: 20px;}
-.home-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
-.span{font-family:'quicksand';}
-h1{font-family: sans-serif;}
-.logo{color: var(--primary-blue); margin-left: 10px;}
-
+.learn-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
 .learn-hero {
     height: 434px;
     background: url(../images/Family\ at\ table.png); width :1400px;
@@ -204,7 +191,6 @@ h1{font-family: sans-serif;}
     justify-content: flex-end;
     padding-right: 10%;
 }
-
 .hero-split {
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -214,90 +200,94 @@ h1{font-family: sans-serif;}
     text-align: center;
     line-height: 1.0cm;
 }
-
 .section-title {
-    color: #1a4a7c;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
 }
-.section-title i { color: #f9d448; margin-right: 10px; }
-
+.learn-container {margin: 20px; padding: 10px 0; text-align: center; border-radius: 25px; background: url(../images/background\ 3.jpg) no-repeat center; background-size: cover; }
+.learn h4{ color: var(--dark-blue); font-family: 'quicksand'; margin-bottom: 30px; font-size: 20px; font-style: bold;}
+.article-card h4{ color: var(--dark-blue); font-family: sans-serif; font-size: 30px; margin-bottom: 10px; }
+.article-card p { color: var(--dark-blue); font-family: 'quicksand'; font-size: 20px; font-style: bold; }
 
 /* Article Grid (3 columns) */
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    margin-top: 10px;
 }
 
 .article-card {
+    margin: 20px;
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .article-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
 .article-card img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
 
 /* More Resources Grid (2 columns) */
+.content-section{margin: 20px; padding: 10px 0; text-align: center; border-radius: 25px; background: url(../images/background\ 3.jpg) no-repeat center; background-size: cover;}
+.wide-card h4{ color: var(--dark-blue); font-family: sans-serif; font-size: 30px; margin-bottom: 10px; }
+.wide-card p { color: var(--dark-blue); font-family: 'quicksand'; font-size: 20px; font-style: bold; }
+
 .resource-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    margin-top: 10px;
 }
 
 .wide-card {
+    margin: 20px;
     background: white;
+    padding: 20px;
     border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
-
-.wide-card img { width: 100%; height: 200px; object-fit: cover; }
-.wide-card-content { padding: 25px; text-align: center; }
-
-.btn {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: opacity 0.2s;
-    margin-top: 15px;
-    color: white;
-    font-family: sans-serif;
-    font-size: 20px;
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-.btn:hover { opacity: 0.8; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+.wide-card img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
 
-.btn-primary { background: var(--red); }
-.btn-blue { background: var(--primary-blue); }
-.btn-teal { background: var(--teal); }
-.btn-yellow { background: var(--yellow); color: #333; }
-.btn-red { background: var(--red); }
 
-.icon-blue { color: var(--primary-blue); }
-.icon-teal { color: var(--teal); }
-.icon-yellow { color: var(--yellow); }
-.icon-red { color: var(--red); }
 
-/* Footer */
-footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
-.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: start;}
-.social-icons i { font-size: 20px; margin-right: 15px; cursor: pointer; }
-.copyright { text-align: center; background: var(--yellow); color: #333; margin-top: 20px; font-family: sans-serif; font-style: bold; padding: 10px; }
-.footer-col p{ color: white; font-family: 'quicksand'; font-size: 16px; line-height: 1.4; margin-bottom: 5px;}
-.footer-col h4{ color: var(--yellow); font-family: 'quicksand'; font-size: 18px; margin-bottom: 10px; }
-                
                 
 
-   
+/* Services page */
+.services-hero {
+    height: 264px;
+    background: url(../images/service\ hero.jpg); width :1400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-right: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-serve h2{
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    max-width: 400px;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+.service-text{color: var(--dark-blue); font-family: 'quicksand'; margin-bottom: 30px; font-size: 20px; font-style: bold; text-align: center;}
+.paed-services{margin: 20px; padding: 10px 0; text-align: center; border-radius: 25px; background: url(../images/background\ 3.jpg) no-repeat center; background-size: cover;}
+.paed-services h4{ color: var(--dark-blue); font-family: 'quicksand'; margin-bottom: 30px; font-size: 20px; font-style: bold;}
+.services-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
