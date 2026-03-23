@@ -263,8 +263,181 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 .wide-card img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
 
 
+/* For Kids page */
+.kids-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
+.kids-hero {
+    height: 434px;
+    background: url(../images/happy\ children.jpg); width :1400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-right: 10%;
+    width: 100%;
+}
+.hero-fun{
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;}
 
-                
+.hero-fun h2{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: var(--dark-blue);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+.hero-fun p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px; /* Pill effect */
+    font-size: 20px;
+    color: var(--dark-blue);
+    margin-top: 0; /* Removes default browser spacing */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+
+ /* Kids Cards Section - Grid */
+.kids-content {
+    padding: 30px 0;
+    margin: 20px;
+    border-radius: 25px;
+    background: url(../images/background\ 2.jpg) no-repeat center; background-size: cover;
+}
+.kids-content .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a4a7c;
+    margin-bottom: 30px;
+}
+.kids-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    gap: 90px;
+    max-width: none;
+    min-width: 1000px;
+    margin: 0 auto;
+    
+}
+.kids-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.kids-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.kids-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.kids-card-title {
+    text-align: center;
+    padding: 20px;
+    color: #1a4a7c;
+    font-size: 1.4rem;
+    font-weight: 700;
+}  
+
+/* Play & Learn Buttons */
+.play-learn {
+    padding: 30px 0;
+    margin: 20px;
+    border-radius: 25px;
+    background: url(../images/background\ 2.jpg) no-repeat center; background-size: cover
+}
+
+.play-learn .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a4a7c;
+    margin-bottom: 25px;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 95px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.action-btn {
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-btn i {
+    font-size: 1.8rem;
+}
+
+.action-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Dynamic Colors for Action Buttons */
+.action-blue { background-color: #2b78c5; }
+.action-teal { background-color: #78c5c5; }
+.action-yellow { background-color: #f9d448; color: #333; }
+
+/* Giant Red CTA */
+.start-learning {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.big-cta-btn {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 25px;
+    font-size: 2rem;
+    font-weight: 800;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(255, 107, 107, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.big-cta-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 20px rgba(255, 107, 107, 0.5);
+}
+
+
 
 /* Services page */
 .services-hero {
@@ -291,3 +464,187 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 .paed-services{margin: 20px; padding: 10px 0; text-align: center; border-radius: 25px; background: url(../images/background\ 3.jpg) no-repeat center; background-size: cover;}
 .paed-services h4{ color: var(--dark-blue); font-family: 'quicksand'; margin-bottom: 30px; font-size: 20px; font-style: bold;}
 .services-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
+
+
+
+/* Log in page */
+/* --- Login Custom Styles --- */
+.log {
+    min-width: 0;
+    max-width: 1400px;
+    margin: auto;
+    background: url(../images/background\ 2.jpg);
+    line-height: 1.5cm;
+    color: #333;
+    overflow-x: hidden;
+    width: 100%;
+}
+.login-card {
+    max-width: 450px; /* Slimmer profile than Sign Up */
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Add padding on the right side so typed text doesn't overlap the lock */
+.password-wrapper input {
+    padding-right: 45px; 
+}
+
+/* Anchors the lock icon exactly to the right-middle of the input */
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0; /* Soft neutral grey */
+    font-size: 1.1rem;
+    pointer-events: none; /* Allows user clicks to pass through to the input */
+}
+
+/* Stacking footer links natively */
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.footer-link {
+    color: #1a4a7c;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: underline;
+    font-style: italic; /* Matches your high-fidelity design font styles */
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ff6b6b;
+}
+
+/* Sign up page  */
+.signup-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
+.sign {
+    min-width: 0;
+    max-width: 1400px;
+    margin: auto;
+    background: url(../images/background\ 2.jpg);
+    line-height: 1.5cm;
+    color: #333;
+    overflow-x: hidden;
+    width: 100%;
+}
+/* --- Authentication & Forms Styles --- */
+
+.auth-section {
+    padding: 60px 0;
+    min-height: calc(100vh - 160px); /* Centers the card vertically between header/footer */
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* The White Card */
+.form-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px; /* Limits standard width so it isn't too boxy */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft outer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 {
+    text-align: center;
+    color: #1a4a7c;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+/* Individual Form Inputs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #1a4a7c;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #a0aec0; /* Subdued blue-grey border outline */
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #2b78c5; /* Glows blue on click typing */
+    box-shadow: 0 0 8px rgba(43, 120, 197, 0.2);
+}
+
+/* Giant Yellow Submit Button */
+.yellow-submit-btn {
+    width: 100%;
+    background-color: #f9d448;
+    color: #1a4a7c;
+    border: none;
+    padding: 16px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(249, 212, 72, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.yellow-submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(249, 212, 72, 0.4);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-link {
+    color: #1a4a7c;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: #ff6b6b; /* Warm playful red hover state */
+}
+
+
+
+/* Contact page */
+.contact-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
