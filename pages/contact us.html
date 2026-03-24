@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/627ad3e1e2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../src/style.css">
 </head>
-<body>
+<body class="contact">
     <header class="nav">
         <div class="logo">
             <h1>❤️LittleCare <span class="span">Clinic</span></h1>
@@ -27,6 +27,82 @@
             <i class="fas fa-search"></i>
         </div>
     </header>
+
+    
+    <section class="contact-hero-banner">
+        <div class="contact-hero-text">
+            <h2>Contact Our Clinic</h2>
+        </div>
+    </section>
+    
+    <section class="contact-content cloud-bg">
+    <div class="container contact-grid">
+        
+        <div class="contact-box message-box">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="yellow-submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-box clinic-info-card">
+            <div class="info-top">
+                <h3>Clinic Contact Info</h3>
+                <hr class="blue-divider">
+            </div>
+
+            <div class="info-list">
+                <div class="info-item">
+                    <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                    <p>+233 276 899 234</p>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <p>ama@gmail.com</p>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <p>123 Hill St, Accra, Ghana</p>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <div class="map-frame">
+                    <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15883.686457249953!2d-0.21235756844918435!3d5.57860591043112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a6beafe49ef%3A0x31081082a611a9ed!2s123%20Hill%20St%2C%20Accra!5e0!3m2!1sen!2sgh!4v1774391118486!5m2!1sen!2sgh"
+                     style="border:0;" 
+                     allowfullscreen="" 
+                     loading="lazy" 
+                     referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="map-title">Map</div>
+            </div>
+        </div>
+
+    </div>
+    </section>  
 
     <footer>
         <div class="container footer-grid">

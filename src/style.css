@@ -473,7 +473,7 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
     min-width: 0;
     max-width: 1400px;
     margin: auto;
-    background: url(../images/background\ 2.jpg);
+    background: url(../images/background\ 3.jpg);
     line-height: 1.5cm;
     color: #333;
     overflow-x: hidden;
@@ -532,7 +532,7 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
     min-width: 0;
     max-width: 1400px;
     margin: auto;
-    background: url(../images/background\ 2.jpg);
+    background: url(../images/background\ 3.jpg);
     line-height: 1.5cm;
     color: #333;
     overflow-x: hidden;
@@ -648,3 +648,170 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 
 /* Contact page */
 .contact-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
+.contact {
+    min-width: 0;
+    max-width: 1400px;
+    margin: auto;
+    background: url(../images/background\ 3.jpg);
+    line-height: 1.5cm;
+    color: #333;
+    overflow-x: hidden;
+    width: 100%;
+}
+.contact-hero-banner {
+    height: 400px;
+    background: url(../images/contact\ hero.jpg); width :1400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-right: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.contact-hero-text h2 {
+    background: white;
+    padding: 15px 40px;
+    border-radius: 20px;
+    font-size: 2.2rem;
+    color: #1a4a7c;
+    font-weight: 800;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Parent container holds them side by side and keeps them equal height */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Forces equal height for both boxes */
+    gap: 40px;
+    padding: 50px 0;
+}
+
+/* Base styling for BOTH white cards */
+.contact-box {
+    background: #ffffff; /* Turns white backgrounds on! */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #a0aec0; /* Subdued blue-grey border outline */
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+/* Left Form Box width limitation */
+.message-box {
+    flex: 1.4; /* Sits at roughly 60% width of the container */
+    max-width: 650px; /* Stops the first box from stretching too wide */
+}
+
+/* Right Info Box dimensions */
+.clinic-info-card {
+    flex: 1; /* Sits at roughly 40% width of the container */
+    max-width: 450px; /* Keeps the smaller box neat and compact */
+    justify-content: space-between; /* Pushes the map to the very bottom */
+}
+
+/* Resetting flex inside info card elements */
+.info-top h3 {
+    color: #1a4a7c;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.blue-divider {
+    border: none;
+    border-top: 2px solid #1a4a7c;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-circle {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    color: #1a4a7c;
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    color: #1a4a7c;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Pushed to the bottom of the card */
+.map-section {
+    border-top: 1.5px solid #e2e8f0;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.map-frame {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.map-title {
+    color: #1a4a7c;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* Specific to textareas so they feel spacious */
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #a0aec0;
+    border-radius: 10px;
+    font-size: 1rem;
+    resize: vertical; /* Allows users to drag it taller, but not wider */
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+textarea:focus {
+    border-color: #2b78c5;
+}
