@@ -14,7 +14,7 @@
     font-family: 'quicksand', sans-serif; }
 
 
-body{ min-width: 0; max-width: 1400px; margin: auto; background-color: #f8fbfd; line-height: 1.5cm; color: #333; overflow-x: hidden; width: 100%;}
+body{ min-width: 1200px; max-width: 1400px; margin:0; padding:0; background-color: #f8fbfd; line-height: 1.5cm; color: #333; overflow-x: auto; width: 100%;}
 .container { width: 95%; max-width: 1400px; margin: 0 auto; padding: 0 20px;}
 
 /* Header */
@@ -28,7 +28,7 @@ h1{font-family: sans-serif;}
 /* Hero Section */
 .hero {
     height: 434px;
-    background: url(../images/Hero.png); width :1400px;
+    background: url(../images/Hero.png); width :1255px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -182,7 +182,7 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 .learn-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
 .learn-hero {
     height: 434px;
-    background: url(../images/Family\ at\ table.png); width :1400px;
+    background: url(../images/Gemini_Generated_Image_600cxx600cxx600c.png); width :1255px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -442,7 +442,7 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 /* Services page */
 .services-hero {
     height: 264px;
-    background: url(../images/service\ hero.jpg); width :1400px;
+    background: url(../images/service\ hero.jpg); width :1255px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -470,13 +470,14 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 /* Log in page */
 /* --- Login Custom Styles --- */
 .log {
-    min-width: 0;
+    min-width: 1200px;
     max-width: 1400px;
-    margin: auto;
+    margin: 0;
+    padding: 0;
     background: url(../images/background\ 3.jpg);
     line-height: 1.5cm;
     color: #333;
-    overflow-x: hidden;
+    overflow-x: auto;
     width: 100%;
 }
 .login-card {
@@ -529,13 +530,14 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 /* Sign up page  */
 .signup-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
 .sign {
-    min-width: 0;
+    min-width: 1200px;
     max-width: 1400px;
-    margin: auto;
+    margin:0;
+    padding: 0;
     background: url(../images/background\ 3.jpg);
     line-height: 1.5cm;
     color: #333;
-    overflow-x: hidden;
+    overflow-x: auto;
     width: 100%;
 }
 /* --- Authentication & Forms Styles --- */
@@ -649,13 +651,14 @@ footer { background: var(--dark-blue); color: white; padding: 20px 0 10px; }
 /* Contact page */
 .contact-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
 .contact {
-    min-width: 0;
+    min-width: 1200px;
     max-width: 1400px;
-    margin: auto;
+    margin: 0;
+    padding: 0;
     background: url(../images/background\ 3.jpg);
     line-height: 1.5cm;
     color: #333;
-    overflow-x: hidden;
+    overflow-x: auto;
     width: 100%;
 }
 .contact-hero-banner {
