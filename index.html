@@ -11,81 +11,82 @@
 <body>
     <header class="nav">
         <div class="logo">
-            <h1>❤️LittleCare <span class="span">Clinic</span></h1>
+            <h1> ❤️LittleCare <span class="span">Clinic</span></h1>
         </div>
         <div>
-            <nav>
-                <a href="index.html" class="home-btn">Home</a>
-                <a href="pages/learn.html">Learn</a>
-                <a href="pages/for kids.html">For Kids</a>
-                <a href="pages/services.html">Services</a>
-                <a href="pages/contact us.html">Contact</a>
-                <a href="pages/sign up.html">Sign Up</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/learn.html" class="nav-link">Learn</a>
+                <a href="pages/for kids.html" class="nav-link">For Kids</a>
+                <a href="pages/services.html" class="nav-link">Services</a>
+                <a href="pages/contact us.html" class="nav-link">Contact</a>
+                <a href="pages/sign up.html" class="nav-link">Sign Up</a>
             </nav>
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..."class="search-input">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Gentle Care for Growing Smiles</h2>
-            <p>Providing compassionate pediatric care for infants, children, and teens in a warm and friendly environment.</p>
+            <h2>Trusted Pediatric Care for Growing Minds</h2>
+            <p>Supporting parents with expert healthcare guidance, providing compassionate care and helping children learn healthy habits in a fun and engaging way.</p>
             <button class="btn btn-primary">Book an Appointment</button>
         </div>
     </section>
 
-    <section class="services container">
+    <section class="services reveal">
         <h3>Our Services</h3>
         <div class="service-grid">
             <div class="card">
-                <img src="images/Stethoscope.jpg" alt="doctor">
-                <h4>Check-Ups</h4>
+                <img src="images/checkup.png" alt="doctor">
+                <h4>Pediatric Consultations</h4>
                 <button class="btn btn-blue">Learn More</button>
             </div>
             <div class="card">
-                <img src="images/download.png" alt="growth">
+                <img src="images/grow.png" height="220px" alt="growth">
                 <h4>Growth Monitoring</h4>
                 <button class="btn btn-teal">Learn More</button>
             </div>
             <div class="card">
-                <img src="images/education.jpg" height="220px" alt="reading">
+                <img src="images/educate.png" height="220px" alt="reading">
                 <h4>Health Education</h4>
                 <button class="btn btn-yellow">Learn More</button>
             </div>
             <div class="card">
-                <img src="images/Nutrition.jpg" height="220px" alt="advice">
+                <img src="images/food.png" height="220px" alt="advice">
                 <h4>Nutrition Advice</h4>
                 <button class="btn btn-red">Learn More</button>
             </div>
         </div>
     </section>
     
-    <section class="learn-play container">
+    <section class="learn-play reveal">
         <h3>Learn & Play</h3>
+        <p class="section-intro">
+            Choose how you want to explore - helpful resources for parents or fun activities for kids!
+        </p>
         <div class="split-grid">
-            <div class="info-box1">
+            <div class="info-box parents">
                 <div class="text-content">
-                    <h4>For Parents</h4>
-                    <p>Helpful resources on nutrition, sleep habits, growth milestones, and child wellness.</p>
-                    <button class="btn btn-teal">Explore Resources</button>
+                    <h4>📚👨‍👩‍👧‍👦For Parents</h4>
+                    <p>Access trusted health tips, child development guidance, and pediatric services.</p>
+                    <a href="learn.html" class="btn btn-teal">Explore Resources</a>
                 </div>
-                <img src="images/eat.jpg" alt="Nutrition illustration" class="circle-img">
             </div>
-            <div class="info-box">
+            <div class="info-box kids">
                 <div class="text-content">
-                    <h4>For Kids</h4>
-                    <p>Fun and friendly activities to help children learn healthy habits and feel comfortable.</p>
-                    <button class="btn btn-yellow">Let's Learn</button>
+                    <h4>🎨For Kids</h4>
+                    <p>Learn healthy habits through fun, interactive activities and games!</p>
+                    <a href="kids.html" class="btn btn-yellow">Start Playing</a>
                 </div>
-                <img src="images/learn.jpg" alt="Kids playing" class="circle-img">
             </div>
         </div>
     </section>
 
-    <section class="doctor-profile container">
+    <section class="doctor-profile reveal">
         <div class="profile-card">
             <img src="images/Black doctor.webp" alt="Dr. Ama Mensah" class="profile-circle">
             <div class="profile-text">
@@ -135,5 +136,6 @@
             &copy; 2026 LittleCare Clinic. All rights reserved.
         </div>
     </footer>
+    <script src="src/script.js"></script>
 </body>
 </html>
