@@ -10,7 +10,10 @@
 <body>
     <header class="nav">
         <div class="logo">
-            <h1> ❤️LittleCare <span class="span">Clinic</span></h1>
+          <a href="index.html" class="logo-link">
+            <img src="../images/logo.jpg" alt="LittleCare Clinic logo" class="nav-logo">
+            <h1 class="logo-title">LittleCare <span class="span">Clinic</span></h1>
+          </a>
         </div>
         <div>
             <nav class="nav-links">
@@ -30,33 +33,53 @@
     
     <section class="kids-hero">
         <div class="hero-fun">
-            <h2>Let's Learn Healthy Habits!</h2>
-            <p>Fun Health Lessons for Kids.</p>
+            <h2>Let's Learn Healthy Habits!🥳🥳</h2>
+            <p>
+               Discover healthy habits through fun activities, games, and exciting challenges!
+            </p>
+            <button class="big-cta-btn">Start Learning🚀</button>
         </div>
     </section>
 
     <section class="kids-content cloud-bg">
         <div class="container">
             <h3 class="section-title">Featured Learning Cards</h3>
+
+            <div class="progress-container">
+                    <p> <i class="fa-solid fa-star"></i>Your Progress</p>
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <p class="progress-text">0% completed</p>
+            </div>
+
             <div class="kids-grid">
-                <div class="kids-card">
+                <div class="kids-card" tabindex="0" role="button">
                     <img src="../images/brush.png" alt="Brushing teeth" class="kids-card-img">
                     <div class="kids-card-title">Brush Teeth</div>
+                    <p class="kids-extra"> Brush your teeth twice a day to keep them strong and healthy!</p>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
                 </div>
 
-                <div class="kids-card">
+                <div class="kids-card" tabindex="0" role="button">
                     <img src="../images/wash.png" alt="Washing hands" class="kids-card-img">
                     <div class="kids-card-title">Wash Hands</div>
+                    <p class="kids-extra">Wash your hands regularly to stay clean and healthy!</p>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
                 </div>
 
-                <div class="kids-card">
+                <div class="kids-card" tabindex="0" role="button">
                     <img src="../images/healthy.jpg" alt="Eating healthy" class="kids-card-img">
                     <div class="kids-card-title">Eat Healthy</div>
+                    <p class="kids-extra"></p>Eat a balanced diet to grow strong and stay healthy!</p>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
                 </div>
 
-                <div class="kids-card">
+                <div class="kids-card" tabindex="0" role="button">
                     <img src="../images/doctor.jpg" alt="Visit doctor" class="kids-card-img">
                     <div class="kids-card-title">Visit Doctor</div>
+                    <p class="kids-extra">Visit your doctor regularly for check-ups and advice!</p>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
                 </div>
             </div>
         </div>
@@ -65,15 +88,9 @@
     <section class="play-learn container">
         <h3 class="section-title">Play & Learn</h3>
         <div class="action-grid">
-            <button class="action-btn action-blue">
-                <i class="fas fa-play-circle"></i> Watch
-            </button>
-            <button class="action-btn action-teal">
-                <i class="fas fa-book-open"></i> Learn
-            </button>
-            <button class="action-btn action-yellow">
-                <i class="fas fa-bullseye"></i> Practice
-            </button>
+            <button class="action-btn action-blue">▶️ Watch</button>
+            <button class="action-btn action-teal"> 📖 Learn</button>
+            <button class="action-btn action-yellow">🎯 Practice</button>
         </div>
     </section>
 
@@ -82,36 +99,37 @@
     </section>
 
     <footer>
-        <div class="container footer-grid">
+       <div class="container footer-grid">
             <div class="footer-col">
-                <h4>📞Contact Us</h4>
-                <p>+233 276 899 234</p>
-                <p>Email: ama@gmail.com</p>
+                <h4><i class="fas fa-phone-alt"></i> Contact Us</h4>
+                <a href="tel:+233276899234" class="footer-link">+233 276 899 234</a>
+                <a href="mailto:ama@gmail.com" class="footer-link">ama@gmail.com</a>
             </div>
             <div class="footer-col">
-                <h4>📃Company</h4>
-                <p>About us</p>
-                <p>Privacy Policy</p>
-                <p>Terms of Service</p>
+                <h4> <i class="fa-solid fa-building"></i>Company</h4>
+                <a href="about.html" class="footer-link">About us</a>
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <a href="terms.html" class="footer-link">Terms of Service</a>
             </div>
             <div class="footer-col">
-                <h4>❓FAQs</h4>
-                <p>FAQs</p>
-                <p>Support</p>
+                <h4> <i class="fa-solid fa-circle-question"></i>FAQs</h4>
+                <a href="faq.html" class="footer-link">FAQs</a>
+                <a href="support.html" class="footer-link">Support</a>
             </div>
             <div class="footer-col">
                 <h4>Social Media</h4>
                 <div class="social-icons">
-                    <i class="fab fa-facebook"></i></a>
-                    <i class="fab fa-instagram"></i></a>
-                    <i class="fab fa-linkedin"></i></a>
-                    <i class="fab fa-youtube"></i></a>
+                   <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                   <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                   <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                   <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 LittleCare Clinic. All rights reserved.
+            <p>&copy; 2026 LittleCare Clinic. All rights reserved.</p>
         </div>
+        <script src="../src/script.js"></script>
     </footer>
 
 </body>

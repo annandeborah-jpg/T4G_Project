@@ -87,3 +87,127 @@ cards.forEach(card => {
     }, 300);
   });
 });
+
+
+// ===============================
+// ACCESSIBLE SERVICES INTERACTION
+// ===============================
+const serviceCards = document.querySelectorAll('.services .card');
+
+serviceCards.forEach(card => {
+
+  function toggleCard() {
+
+    const isActive = card.classList.contains('active');
+
+    // Close all cards first
+    serviceCards.forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-expanded', 'false');
+    });
+
+    // If it was not active, open it
+    if (!isActive) {
+      card.classList.add('active');
+      card.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Click anywhere on card
+  card.addEventListener('click', toggleCard);
+
+  // Keyboard support (Enter or Space)
+  card.addEventListener('keydown', (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleCard();
+    }
+  });
+
+});
+// Function to handle card clicking (Professional behavior)
+document.querySelectorAll('.article-card, .wide-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const btn = card.querySelector('button');
+        if (btn) btn.click(); // Triggers the "Read More" logic
+    });
+});
+
+// ===============================
+// KIDS CARDS INTERACTION
+// ===============================
+const kidsCards = document.querySelectorAll('.kids-card');
+
+kidsCards.forEach(card => {
+
+  function toggleCard() {
+
+    const isActive = card.classList.contains('active');
+
+    // Close all
+    kidsCards.forEach(c => c.classList.remove('active'));
+
+    // Open if not active
+    if (!isActive) {
+      card.classList.add('active');
+    }
+    updateProgress();
+    
+  }
+
+  // Click anywhere
+  card.addEventListener('click', toggleCard);
+
+  // Keyboard support
+  card.addEventListener('keydown', (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleCard();
+    }
+  });
+
+});
+
+
+  const actionBtns = document.querySelectorAll('.action-btn');
+
+actionBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.textContent = "✨ Great choice!";
+    
+    setTimeout(() => {
+      btn.textContent = btn.getAttribute('data-original') || btn.textContent;
+    }, 1500);
+  });
+
+  // Save original text
+  btn.setAttribute('data-original', btn.textContent);
+});
+
+const heroBtn = document.querySelector('.big-cta-btn');
+
+heroBtn.addEventListener('click', () => {
+  heroBtn.textContent = "🎉 Let’s Go!";
+  
+  setTimeout(() => {
+    heroBtn.textContent = "Start Learning 🚀";
+  }, 1500);
+});
+
+// ===============================
+// PROGRESS TRACKER
+// ===============================
+const progressFill = document.querySelector('.progress-fill');
+const progressText = document.querySelector('.progress-text');
+
+function updateProgress() {
+
+  const activeCards = document.querySelectorAll('.kids-card.active').length;
+  const totalCards = document.querySelectorAll('.kids-card').length;
+
+  const percent = Math.round((activeCards / totalCards) * 100);
+
+  progressFill.style.width = percent + "%";
+  progressText.textContent = percent + "% completed 🎉";
+
+}
