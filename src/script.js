@@ -194,6 +194,37 @@ heroBtn.addEventListener('click', () => {
   }, 1500);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.kids-card');
+    const progressFill = document.querySelector('.progress-fill');
+    const progressText = document.querySelector('.progress-text');
+    
+    let completedCount = 0;
+    const totalCards = cards.length;
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const starIcon = card.querySelector('.star i');
+            
+            // Toggle card completion
+            if (!card.classList.contains('is-complete')) {
+                card.classList.add('is-complete');
+                starIcon.style.color = "#ffcc33"; // Yellow for complete
+                completedCount++;
+            } else {
+                card.classList.remove('is-complete');
+                starIcon.style.color = "#ccc"; // Gray for incomplete
+                completedCount--;
+            }
+
+            // Update UI
+            const percentage = Math.round((completedCount / totalCards) * 100);
+            progressFill.style.width = `${percentage}%`;
+            progressText.innerText = `${percentage}% completed`;
+        });
+    });
+});
+
 // ===============================
 // PROGRESS TRACKER
 // ===============================
@@ -211,3 +242,43 @@ function updateProgress() {
   progressText.textContent = percent + "% completed 🎉";
 
 }
+
+//SERVICE PAGE
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Reveal Animations on Scroll
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    const revealOnScroll = () => {
+        serviceCards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            if (cardTop < triggerBottom) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    // Initial state for cards before they reveal
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s ease-out';
+    });
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Trigger once on load
+
+    // 2. "Learn More" Button Interactivity
+    const serviceButtons = document.querySelectorAll('.service-card .btn');
+    
+    serviceButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const cardTitle = e.target.parentElement.querySelector('h4').innerText;
+            // This can later be linked to specific modal popups or pages
+            console.log(`User interested in: ${cardTitle}`);
+            alert(`More information about ${cardTitle} will be available soon!`);
+        });
+    });
+});

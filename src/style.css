@@ -301,10 +301,12 @@ position: relative;  overflow: hidden;}
 .btn:hover { opacity: 0.9; letter-spacing: 0.5px; }
 
 .btn-primary { background: var(--red); color: #fff; }
-.btn-blue { background: var(--primary-blue); color:white; }
+.btn-blue { background: #4a90e2; color:white; }
 .btn-yellow { background: #ffcc33; color: #fff; }
 .btn-teal { background: #4db6ac; color: #fff; }
 .btn-red { background: #ff6b6b; color: #fff; }
+/* .btn-blue { background-color: #4a90e2; } */
+
 
 .icon-blue { color: var(--primary-blue); }
 .icon-teal { color: var(--teal); }
@@ -312,13 +314,21 @@ position: relative;  overflow: hidden;}
 .icon-red { color: var(--red); }
 
 .btn {
-  padding: 10px 25px;
+  /* padding: 10px 25px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
   font-weight: 700;
-  margin: 15px 20px;
+  margin: 15px 20px; */
+  border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 15px;
 }
 
 .card,
@@ -521,12 +531,11 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     background-repeat: no-repeat;
     align-items: center;
     padding:20px;
-    /* width: 100%; */
     display: flex;
     text-align: center;
     justify-content: center;
-    
 }
+
 .hero-fun{
  background: rgba(255, 255, 255, 0.85);
     padding: 30px;
@@ -615,34 +624,55 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
 
 
  /* Kids Cards Section - Grid */
-.kids-content {
-    padding: 30px 0;
-    margin: 20px;
-    border-radius: 25px;
-    position: relative;
-    background: url(../images/background\ 2.jpg) no-repeat center; background-size: cover;
+.kids-content,.play-learn,.start-learning{
+    font-family: 'Quicksand', sans-serif; text-align:center;
 }
-.kids-content .section-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #1a4a7c;
-    margin-bottom: 30px;
+.kids-page-wrapper {
+    background-image: url('../images/background\ 2.jpg'); /* Use the generated subtle clouds */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This makes the clouds stay still while you scroll */
+    padding-bottom: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
+
 .kids-grid {
-     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-    gap: 20px;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+    margin-bottom: 80px;
 }
-  
-.kids-card {
-    /* background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* padding: 20px;
-    text-align: center; */
+.kids-title {
+    color: var(--dark-blue); font-family: sans-serif; font-size: 40px; margin-bottom: 10px;
     position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+}
+.kids-title::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff8c61;
+    border-radius: 10px;
+}
+.kids-card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid #f0f0f0;
+    flex-direction: column;
+    align-items: center;
 }
 
 .kids-card:hover {
@@ -650,20 +680,18 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
 }
 
 .kids-extra {
-  /* max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.3s; */
-  color: #666;
-    margin-top: 10px;
-    opacity: 0.8;
-  font-size: 0.9rem;
+  color:var(--dark-blue);
+  font-size: 1.0rem;
+   font-family: 'quicksand';
+   padding: 0 20px;
 }
 
 .kids-card-img {
-    width: 90%;
-    margin-bottom: 10px;
-    transition: 0.3s;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .kids-card-title {
@@ -710,34 +738,35 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
 }
 
 .progress-container {
-  /* max-width: 400px;
-  margin: 0 auto 30px auto;  */
-  text-align: center;
-  background: #fff;
-  padding: 20px;
+  /* text-align: center; */
+  background: #ffffff;
+  padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  margin-bottom: 30px;
+  box-shadow:0 4px 15px rgba(0, 0, 0, 0.05) ;
+  margin: 40px 0;
 }
 
 .progress-bar {
   width: 100%;
-  height: 15px;
-  background: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 10px 0;
+  height: 18px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eee;
 }
 
 .progress-fill {
   height: 100%;
-  /* width: 0%; */
-  background: linear-gradient(90deg, orange, gold);
-  transition: width 0.5s ease;
+  width: 0%;
+  background:linear-gradient(90deg, #ffcc33 0%, #ff8c61 100%);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
-.progress-text {
-  font-size: 1.5rem;
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .kids-card.active {
@@ -757,141 +786,157 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
 }
 
 /* Play & Learn Buttons */
-.play-learn {
-    padding: 30px 0;
-    margin: 20px;
-    border-radius: 25px;
-    background: url(../images/background\ 2.jpg) no-repeat center; background-size: cover
-}
-
-.play-learn .section-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #1a4a7c;
-    margin-bottom: 25px;
-}
-
 .action-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 95px;
-    max-width: 900px;
-    margin: 0 auto;
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    /* margin: 40px 0; */
+    padding: 60px 0;
 }
 
 .action-btn {
     border: none;
-    border-radius: 30px;
-    padding: 15px 25px;
-    font-size: 1.8rem;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: 0.3s;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
+    /* width: 120px;
+    height: 120px; */
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    gap: 12px;
 }
 
 .action-btn:hover {
-    transform: scale(1.1)
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 .action-btn:active {
   transform: scale(0.95);
 }
 /* Dynamic Colors for Action Buttons */
-.action-blue { background-color: #2b78c5; }
-.action-teal { background-color: #78c5c5; }
-.action-yellow { background-color: #f9d448; color: #333; }
+.action-blue { background: linear-gradient(135deg, #4a90e2, #357abd); }
+.action-teal { background: linear-gradient(135deg, #4db6ac, #00897b); }
+.action-yellow { background: linear-gradient(135deg, #fbc02d, #f9a825); }
 
 /* Giant Red CTA */
-.start-learning {
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-
 .big-cta-btn {
-  padding: 20px 40px;
-  font-size: 1.3rem;
+  padding: 15px 25px;
+  font-size: 1.8rem;
   border-radius: 40px;
-  background: #ff6b6b;
+  background: linear-gradient(135deg, #ff6b6b,#f73333);
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 700;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 .big-cta-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1) rotate(3deg);
 }
 
 
 
 /* Services page */
 .services-hero {
-    height: 264px;
-    background: url(../images/service\ hero.jpg); width :1400px;
+    height: 30px;
+    background:linear-gradient(135deg, rgba(255, 245, 242, 0.1) 0%, rgba(232, 244, 248, 0.1) 100%), url(../images/service\ hero.jpg); width :1400px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-    padding-right: 10%;
+    padding-left: 5%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    color: white;
+    min-height: 500px;
 }
-.hero-serve p{
-    font-size: 1.2rem;
-    position: absolute;
-    top: 45%;
-    left: 50px;
-    max-width: 400px;
-    z-index: 10;
-    transform: translateY(-50%);
-}
-.hero-serve h2{
-    font-size: 30px;
-    position: absolute;
-    top: 30%;
-    left: 50px;
-    max-width: 400px;
-    z-index: 10;
-    transform: translateY(-50%);
+.hero-serve{background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    max-width: 450px;
+    /* max-height: 300px; */
+    border-radius: 25px;
+    text-align: center;
+    line-height: 1.0cm;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
 }
 
-.paed-services{margin: 20px; padding: 10px 0; text-align: center; border-radius: 25px; background: url(../images/background\ 3.jpg) no-repeat center; background-size: cover;}
+.section-wrapper {
+   background-color:#f8fafd ;
+    background-attachment: fixed; /* This makes the clouds stay still while you scroll */
+    padding-bottom: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 0;
+    position: relative;
+}
+.paed-services{ font-family: 'Quicksand', sans-serif;
+    /* margin: 20px; padding: 10px 0; text-align: center; border-radius: 25px; background: url(../images/background\ 3.jpg) no-repeat center; background-size: cover; */
+}
 .paed-services h4{ color: var(--dark-blue); font-family: 'quicksand'; margin-bottom: 30px; font-size: 20px; font-style: bold;}
 .services-btn { background:lightblue; padding: 5px 15px; border-radius: 5px; }
 
 /* Services grids */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 80px 0;
 }
 
 /* Service cards */
 .paed-service-card {
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  border: 1px solid #e1e8ed;
 }
 .paed-service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border-color: #4a90e2;
 }
 .service-card img {
   width: 100%;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+  /* border-top-left-radius: 12px;
+  border-top-right-radius: 12px; */
+  margin-bottom: 20px;
+  border-radius: 15px;
 }
-.paed-service-card h3 {
-  margin: 1rem 0 0.5rem;
-  color: #0077b6;
+.paed-service-card h4 {
+  /* margin: 1rem 0 0.5rem;
+  color: #0077b6; */
+  color: #1a4a72; /* Deep Navy from your footer */
+    font-size: 1.4rem;
+    margin-bottom: 15px;
 }
 .paed-service-card p {
-  padding: 0 1rem 1rem;
+  /* padding: 0 1rem 1rem;
   font-size: 0.95rem;
-  color: #333;
+  color: #333; */
+  color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-card:active {
+    transform: scale(0.98); /* Subtle 'press' effect when clicked */
 }
 
 /* Responsive adjustments */
