@@ -130,6 +130,14 @@ nav a { text-decoration: none; color: #333; font-weight: 500; margin-right: 20px
 .span{font-family:'quicksand';}
 h1{font-family: sans-serif;}
 
+.hero, .services-hero, .kids-hero, .learn-hero, .contact-hero-banner {
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed; /* This is crucial for the parallax feel */
+    /* Ensure there is enough height to see the effect */
+    min-height: 60vh; 
+    justify-content: center;
+}
 
 /* Hero Section */
 .hero {
@@ -146,17 +154,19 @@ h1{font-family: sans-serif;}
 }
 .hero-content {
     background: rgba(255, 255, 255, 0.85);
-    padding: 30px;
-    max-width: 550px;
+    padding: 30px 0;
+    max-width: 500px;
     max-height: 300px;
     border-radius: 20px;
     text-align: center;
     line-height: 1.0cm;
     backdrop-filter: blur(8px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    
+    
 }
 
-h2{color: var(--dark-blue); font-family:sans-serif ; font-size: 20px;}
+h2{color: var(--dark-blue); font-family:sans-serif ; font-size: 1.6rem;}
 p{color: var(--dark-blue); font-family: 'quicksand'; font-style: bold; font-size: 16px; margin-top: 10px;}
 
 
@@ -314,13 +324,6 @@ position: relative;  overflow: hidden;}
 .icon-red { color: var(--red); }
 
 .btn {
-  /* padding: 10px 25px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-weight: 700;
-  margin: 15px 20px; */
   border: none;
     padding: 12px 25px;
     border-radius: 50px;
@@ -425,6 +428,7 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     backdrop-filter: blur(8px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
+.hero-split h2{font-size: 1.6rem;}
 .section-title {
    color: var(--dark-blue); font-family: sans-serif; font-size: 40px; margin-bottom: 40px;
     position: relative;
@@ -868,7 +872,6 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     line-height: 1.0cm;
     backdrop-filter: blur(8px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    
 }
 
 .section-wrapper {
@@ -877,7 +880,7 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     padding-bottom: 80px;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 20px;
     position: relative;
 }
 .paed-services{ font-family: 'Quicksand', sans-serif;
@@ -903,6 +906,8 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 30px;
   border: 1px solid #e1e8ed;
+  will-change: transform, opacity;
+  cursor: pointer;
 }
 .paed-service-card:hover {
   transform: translateY(-10px);
@@ -954,7 +959,7 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     min-width: 0;
     max-width: 1400px;
     margin: auto;
-    background: url(../images/background\ 3.jpg);
+    background: url(../images/background\ 2.jpg);
     line-height: 1.5cm;
     color: #333;
     overflow-x: hidden;
@@ -1013,7 +1018,7 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     min-width: 0;
     max-width: 1400px;
     margin: auto;
-    background: url(../images/background\ 3.jpg);
+    background: url(../images/background\ 2.jpg);
     line-height: 1.5cm;
     color: #333;
     overflow-x: hidden;
@@ -1142,7 +1147,7 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     min-width: 0;
     max-width: 1400px;
     margin: auto;
-    background: url(../images/background\ 3.jpg);
+    background: url(../images/background\ 2.jpg);
     line-height: 1.5cm;
     color: #333;
     overflow-x: hidden;
@@ -1166,26 +1171,41 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     left: 50px;
     transform: translateY(-50%);
     z-index: 10;
+    
 }
 
 .contact-hero-text h2 {
-    background: white;
+    /* background: white;
     padding: 15px 40px;
     border-radius: 20px;
     font-size: 2.2rem;
     color: #1a4a7c;
     font-weight: 800;
     margin: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    max-width: 450px;
+    /* max-height: 300px; */
+    border-radius: 25px;
+    text-align: center;
+    line-height: 1.0cm;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-size: 1.9rem;
 }
 
 /* Parent container holds them side by side and keeps them equal height */
 .contact-grid {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: stretch; /* Forces equal height for both boxes */
+    align-items: stretch; 
     gap: 40px;
-    padding: 50px 0;
+    padding: 50px 0; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 60px 0;
 }
 
 /* Base styling for BOTH white cards */
@@ -1193,18 +1213,25 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     background: #ffffff; /* Turns white backgrounds on! */
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
+.form-group{margin-bottom: 20px;}
 .form-group input {
-    width: 100%;
+    /* width: 100%;
     padding: 14px;
-    border: 1.5px solid #a0aec0; /* Subdued blue-grey border outline */
+    border: 1.5px solid #a0aec0; 
     border-radius: 10px;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
 }
 /* Left Form Box width limitation */
 .message-box {
@@ -1217,6 +1244,8 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
     flex: 1; /* Sits at roughly 40% width of the container */
     max-width: 450px; /* Keeps the smaller box neat and compact */
     justify-content: space-between; /* Pushes the map to the very bottom */
+    margin-left: 90px;
+    margin-top: 40px;
 }
 
 /* Resetting flex inside info card elements */
@@ -1241,17 +1270,43 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
 }
 
 .info-item {
-    display: flex;
+    /* display: flex;
+    align-items: center;
+    gap: 15px; */
+    /* display: flex;
     align-items: center;
     gap: 15px;
+    margin-bottom: 20px; */
+    display: flex;
+    align-items: flex-start; /* Aligns icon with the top line of text */
+    gap: 15px;
+    margin-bottom: 25px;
 }
-
+.info-item i {
+    color: #4a90e2; /* Brand Blue */
+    font-size: 1.2rem;
+}
 .icon-circle {
-    width: 30px;
+    /* width: 30px;
     display: flex;
     justify-content: center;
     color: #1a4a7c;
-    font-size: 1.2rem;
+    font-size: 1.2rem; */
+    width: 40px;
+    height: 40px;
+    background-color: #e3f2fd; /* Light blue background for icons */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a90e2; /* Your brand blue */
+    flex-shrink: 0; /* Prevents icon from squishing */
+}
+.hours-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
 }
 
 .info-item p {
@@ -1293,13 +1348,17 @@ footer { background:#1a4a72; color: white; padding: 60px 5% 20px; font-family: '
 /* Specific to textareas so they feel spacious */
 textarea {
     width: 100%;
-    padding: 14px;
+    /* padding: 14px;
     border: 1.5px solid #a0aec0;
     border-radius: 10px;
     font-size: 1rem;
-    resize: vertical; /* Allows users to drag it taller, but not wider */
+    resize: vertical; 
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s; */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
 }
 
 textarea:focus {

@@ -282,3 +282,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get data
+            const name = document.getElementById('fullName').value;
+            
+            // Show a friendly confirmation
+            alert(`Thank you, ${name}! Your message has been sent to LittleCare Clinic. We will contact you shortly.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+    }
+});
+    
